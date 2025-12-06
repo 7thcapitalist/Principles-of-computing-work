@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Innovation & Inequality: Why Are Some Countries Richer?</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light navbar-light">
+        <img src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=60"
+            class="mr-2">
+        <a class="navbar-brand" href="#">Innovation & Inequality</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-body"
+            aria-controls="navbar-body" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-body">
+            <ul class="navbar-nav mr-auto"></ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Overview</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Data Sets</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Visualizations</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Regression Model</a></li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+                        role="button" aria-haspopup="true" aria-expanded="false">Resources</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Project Summary</a>
+                        <a class="dropdown-item" href="#">Code &amp; Notebook</a>
+                        <a class="dropdown-item" href="#">Final Report</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Data Sources</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" id="bsr-wrapper">
+        <h1>Why Are Some Countries Richer Than Others?</h1>
+        <div class="my-5"></div>
+
+        <!-- FIRST IMAGE -->
+        <div class="row">
+            <div class="col">
+                <img src="images/number_of_countries_income.png"
+                     class="img-fluid mr-auto d-block border-0 rounded-0">
+            </div>
+            <div class="col-md-9">
+                <p>This project starts from a simple but fundamental question in economics: why do some countries enjoy
+                    much higher incomes than others? To explore this, I build a cross-country dataset that tracks
+                    differences in innovation capacity and income from 2011 to 2024. The idea is to move from raw data
+                    to meaningful insights about global inequality. By combining information on innovation performance
+                    and GDP per capita, the project investigates whether richer countries are systematically those that
+                    innovate more, and whether innovation might be one of the mechanisms behind persistent income gaps
+                    across nations.</p>
+            </div>
+        </div>
+
+        <div class="py-3 my-4"></div>
+        <h1>From Innovation Structures to Innovation Output</h1>
+        <div class="my-5"></div>
+
+        <!-- SECOND IMAGE -->
+        <div class="row">
+            <div class="col-md-9">
+                <p>The first step in the analysis focuses on how governments try to create the conditions for
+                    innovation. Using policy-based data on R&amp;D support, the project looks at how much countries
+                    invest in innovation structures such as research incentives and public support for R&amp;D.
+                    However, spending alone does not guarantee results. To measure how effectively countries convert
+                    these structures into real innovation, I rely on the Global Innovation Index (GII), which scores
+                    national innovation ecosystems on a 0–100 scale. By comparing R&amp;D support to GII scores, the
+                    project examines which countries have efficient innovation systems and which ones struggle to turn
+                    policies and resources into actual innovative output.</p>
+            </div>
+            <div class="col">
+                <img src="images/top10countries_RnD.png"
+                     class="img-fluid mr-auto d-block border-0 rounded-0">
+            </div>
+        </div>
+
+        <div class="py-3 my-4"></div>
+        <h1>Does Innovation Help Explain Global Inequality?</h1>
+        <div class="my-5"></div>
+
+        <div class="row">
+            <div class="col">
+                <img src="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="img-fluid mr-auto d-block border-0 rounded-0">
+            </div>
+            <div class="col-md-9">
+                <p>In the final stage, the project links innovation performance to economic well-being using World Bank
+                    data on GDP per capita. After merging the Global Innovation Index with GDP per capita by
+                    country–year, I estimate a linear regression model where the dependent variable is the logarithm of
+                    GDP per capita and the key explanatory variable is the GII score. This allows me to quantify how
+                    strongly higher innovation capacity is associated with higher income levels. The goal is not to
+                    prove causality, but to test whether countries that innovate more also tend to be richer, and
+                    whether innovation is a plausible contributor to the income gaps we see across the world.</p>
+            </div>
+        </div>
+
+        <div class="py-3 my-4"></div>
+    </div>
+
+    <footer class="bg-light text-light pt-5 pb-2 px-5">
+        <div class="row">
+            <div class="col-md-3">
+                <h2 class="mb-1">Innovation & Inequality</h2>
+                <p class="mb-3"><small><em>Exploring why some countries are richer than others.</em></small></p>
+                <p> University Project <br> Department of Economics &amp; CS <br> Notre Dame, IN </p>
+                <p> TEL (000) 000-0000 <br> EMAIL student@example.com </p>
+                <ul class="list-inline mt-5">
+                    <li class="list-inline-item">
+                        <a href="#" target="_blank" class="text-decoration-none">
+                            <i class="fa fa-fw fa-github-alt" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item py-1">
+                        <a href="#" target="_blank" class="text-decoration-none">
+                            <i class="fa fa-fw fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item py-1">
+                        <a href="#" target="_blank" class="text-decoration-none">
+                            <i class="fa fa-fw fa-facebook-official" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h5>Project Sections</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item py-1 bg-transparent border-0">
+                        <a href="" target="_blank">Overview &amp; Motivation</a>
+                    </li>
+                    <li class="list-group-item py-1 bg-transparent border-0">
+                        <a href="" target="_blank">Data Sources &amp; Cleaning</a>
+                    </li>
+                    <li class="list-group-item py-1 bg-transparent border-0">
+                        <a href="" target="_blank">Visualizations</a>
+                    </li>
+                    <li class="list-group-item py-1 bg-transparent border-0">
+                        <a href="" target="_blank">Regression Results</a>
+                    </li>
+                    <li class="list-group-item py-1 bg-transparent border-0">
+                        <a href="" target="_blank">Discussion &amp; Limitations</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h5>External Resources</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item py-1 bg-transparent border-0">
+                        <a href="" target="_blank">Global Innovation Index (GII)</a>
+                    </li>
+                    <li class="list-group-item py-1 bg-transparent border-0">
+                        <a href="" target="_blank">World Bank GDP per Capita</a>
+                    </li>
+                    <li class="list-group-item py-1 bg-transparent border-0">
+                        <a href="" target="_blank">OECD R&amp;D Data</a>
+                    </li>
+                    <li class="list-group-item py-1 bg-transparent border-0">
+                        <a href="" target="_blank">Project Presentation</a>
+                    </li>
+                    <li class="list-group-item py-1 bg-transparent border-0">
+                        <a href="" target="_blank">Full Report (PDF)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row mt-4">
+            <div class="col-sm-6">
+                <p>Copyright © 2025 Innovation & Inequality</p>
+            </div>
+            <div class="col-sm-6">
+                <ul class="list-inline text-sm-center text-md-right">
+                    <li class="list-inline-item"><a href="" target="_blank">About</a></li>
+                    <li class="list-inline-item"><a href="" target="_blank">Methods</a></li>
+                    <li class="list-inline-item"><a href="" target="_blank">Results</a></li>
+                    <li class="list-inline-item"><a href="" target="_blank">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
+
+
