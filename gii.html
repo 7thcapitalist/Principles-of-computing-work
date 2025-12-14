@@ -1,33 +1,131 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-    <title>GII — Innovation & Inequality</title>
-  </head>
-  <body class="container">
-    <nav class="navbar navbar-expand-lg bg-light navbar-light mb-4">
-      <a class="navbar-brand" href="/index.html">Innovation &amp; Inequality</a>
-      <div class="ml-auto"><a class="btn btn-sm btn-outline-primary" href="/Visualizations/">Visualizations</a></div>
-    </nav>
+<html lang="en" dir="ltr">
 
-    <h1>Global Innovation Index (GII)</h1>
-    <p>This page explains the Global Innovation Index (GII) and how it is used in the analysis.</p>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Global Innovation Index | Innovation & Inequality</title>
 
-    <section class="mb-4">
-      <h2>Related visualization</h2>
-      <p>See the <a href="Visualizations/viz9_efficiency.html">Innovation Efficiency visualization (Viz 9)</a> for how GII relates to R&amp;D spending.</p>
-      <iframe src="Visualizations/viz9_efficiency.html" style="width:100%;height:800px;border:0;" loading="lazy" title="Innovation Efficiency Visualization"></iframe>
-    </section>
+  <style>
+    .viz-text {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      max-width: 980px;
+    }
+  </style>
+</head>
 
-    <section class="mb-4">
-      <h2>Interpretation</h2>
-      <p>Use this section to describe how the GII is constructed (indicators, weights) and how to interpret scores in cross-country comparisons.</p>
-    </section>
+<body>
 
-    <footer class="mt-5 mb-4">
-      <a href="/index.html">Back to home</a>
-    </footer>
-  </body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-light navbar-light">
+    <img src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=60"
+      class="mr-2" alt="Logo">
+    <a class="navbar-brand" href="index.html">Innovation &amp; Inequality</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-body"
+      aria-controls="navbar-body" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar-body">
+      <ul class="navbar-nav mr-auto"></ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Main</a></li>
+        <li class="nav-item"><a class="nav-link" href="gdp.html">GDP</a></li>
+        <li class="nav-item active"><a class="nav-link" href="gii.html">GII</a></li>
+        <li class="nav-item"><a class="nav-link" href="rnd.html">R&amp;D Expenditure</a></li>
+        <li class="nav-item"><a class="nav-link" href="datasets.html">Datasets</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container" id="bsr-wrapper">
+
+    <!-- PAGE HEADER -->
+    <h1>Global Innovation Index</h1>
+    <div class="my-4"></div>
+
+    <!-- DATASET INTRO -->
+    <p class="lead">
+      The Global Innovation Index (GII) measures innovation performance across countries using a composite set of
+      indicators covering institutions, human capital, infrastructure, market sophistication, and knowledge outputs.
+      In this project, GII functions as the central innovation outcome variable, allowing direct comparison of national
+      innovative capacity across countries. Its standardized methodology makes it suitable for linking innovation to
+      income levels and to policy-relevant inputs such as research and development investment.
+    </p>
+
+    <div class="py-3 my-4"></div>
+
+    <!-- SINGLE VISUALIZATION -->
+    <h1>Distribution of Global Innovation Index Scores Across Countries (2022)</h1>
+    <div class="my-4"></div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/GII1.png" class="img-fluid" alt="GII Score Distribution Across Countries">
+      </div>
+    </div>
+
+    <p class="viz-text mt-3">
+      This distribution shows substantial cross-country variation in innovation performance. Most countries cluster in
+      the lower to middle range of GII scores, indicating that high innovation capacity is relatively rare rather than
+      evenly distributed. A small group of countries occupies the upper tail of the distribution, highlighting the
+      concentration of advanced innovation systems in a limited number of economies. The overall spread and skewness
+      of the distribution suggest that innovation gaps are structural, with clear separation between innovation leaders
+      and the majority of countries.
+    </p>
+
+    <div class="py-3 my-4"></div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-white text-dark pt-5 pb-3 px-5">
+    <div class="row">
+      <div class="col-md-4">
+        <h5>Innovation & Inequality</h5>
+        <p><em>Exploring why some countries are richer than others.</em></p>
+        <p>
+          University Project<br>
+          Department of Computer Science &amp; CS<br>
+          Notre Dame, IN
+        </p>
+        <p>
+          TEL (574) 341-9262<br>
+          EMAIL jcarval2@nd.edu, ychen68@nd.edu
+        </p>
+      </div>
+
+      <div class="col-md-4">
+        <h5>Project Sections</h5>
+        <ul class="list-unstyled">
+          <li>Main</li>
+          <li>GDP</li>
+          <li>GII</li>
+          <li>R&amp;D Expenditure</li>
+          <li>Datasets</li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h5>External Resources</h5>
+        <ul class="list-unstyled">
+          <li>Global Innovation Index (GII)</li>
+          <li>World Bank GDP per Capita</li>
+          <li>OECD R&amp;D Data</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr>
+
+    <p class="text-center mb-0">Copyright © 2025 Innovation & Inequality</p>
+  </footer>
+
+</body>
 </html>
+

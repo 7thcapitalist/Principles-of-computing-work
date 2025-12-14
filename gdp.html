@@ -1,32 +1,174 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-    <title>GDP — Innovation & Inequality</title>
-  </head>
-  <body class="container">
-    <nav class="navbar navbar-expand-lg bg-light navbar-light mb-4">
-      <a class="navbar-brand" href="/index.html">Innovation &amp; Inequality</a>
-      <div class="ml-auto"><a class="btn btn-sm btn-outline-primary" href="/Visualizations/">Visualizations</a></div>
-    </nav>
+<html lang="en" dir="ltr">
 
-    <h1>GDP per Capita — Details</h1>
-    <p>This page shows the interactive GDP per capita map and background on how the series was constructed.</p>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <title>GDP per Capita | Innovation & Inequality</title>
 
-    <section class="mb-4">
-      <h2>Interactive map</h2>
-      <iframe src="Visualizations/viz1_gdp_map.html" style="width:100%;height:650px;border:0;" loading="lazy" title="GDP per Capita Map"></iframe>
-    </section>
+  <style>
+    .viz-text {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      max-width: 980px;
+    }
+  </style>
+</head>
 
-    <section class="mb-4">
-      <h2>Notes & methodology</h2>
-      <p>Update this section with a short description of the GDP per capita source, years covered, and any transformations (e.g., log, inflation adjustments).</p>
-    </section>
+<body>
 
-    <footer class="mt-5 mb-4">
-      <a href="/index.html">Back to home</a>
-    </footer>
-  </body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-light navbar-light">
+    <img src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=60"
+      class="mr-2" alt="Logo">
+    <a class="navbar-brand" href="index.html">Innovation &amp; Inequality</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-body"
+      aria-controls="navbar-body" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar-body">
+      <ul class="navbar-nav mr-auto"></ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Main</a></li>
+        <li class="nav-item"><a class="nav-link" href="gdp.html">GDP</a></li>
+        <li class="nav-item"><a class="nav-link" href="gii.html">GII</a></li>
+        <li class="nav-item"><a class="nav-link" href="rnd.html">R&amp;D Expenditure</a></li>
+        <li class="nav-item"><a class="nav-link" href="datasets.html">Datasets</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container" id="bsr-wrapper">
+
+    <!-- PAGE HEADER -->
+    <h1>GDP per Capita</h1>
+    <div class="my-4"></div>
+
+    <!-- DATASET INTRO -->
+    <p class="lead">
+      GDP per capita is a widely used measure of average living standards and economic output per person. In this
+      project, it acts as the core outcome variable because it captures the cross-country income gaps we want to explain.
+      The dataset allows comparisons across countries and over time, making it possible to observe persistent inequality,
+      regional clustering, and long-run development trajectories.
+    </p>
+
+    <div class="py-3 my-4"></div>
+
+    <!-- VIZ 1 -->
+    <h1>Graph 1 Top 10 Countries by Total GDP (2022)</h1>
+    <div class="my-4"></div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/GDP1.png" class="img-fluid" alt="Top 10 Countries by Total GDP (2022)">
+      </div>
+    </div>
+
+    <p class="viz-text mt-3">
+      This bar chart highlights how concentrated global economic output is among a small number of countries. First,
+      the United States and China dominate the ranking, creating a large gap between the top two and the rest, which
+      shows that the world economy is heavily shaped by a few very large producers. Second, several countries appear
+      with similar magnitudes in the middle of the top ten, indicating that after the top tier there is a tighter group
+      of large economies that still matter a lot but do not match the scale of the leaders. Third, the list includes
+      countries with very different population sizes, which is a reminder that total GDP reflects economic scale, not
+      living standards, and motivates why GDP per capita is needed to evaluate prosperity per person.
+    </p>
+
+    <div class="py-3 my-4"></div>
+
+    <!-- VIZ 2 -->
+    <h1>Graph 2 Top 10 Countries by GDP per Capita (2022)</h1>
+    <div class="my-4"></div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/GDP2.png" class="img-fluid" alt="Top 10 Countries by GDP per Capita (2022)">
+      </div>
+    </div>
+
+    <p class="viz-text mt-3">
+      This chart focuses on average income levels, which can look very different from the total GDP ranking. First,
+      many of the highest GDP per capita locations are small economies, including financial centers and small states,
+      which suggests that very high average incomes are not limited to the largest producers in the world economy.
+      Second, the gap between the top entry and the rest is large, indicating that the top of the income distribution
+      is extremely concentrated and that the richest cases can be outliers relative to other high-income countries.
+      Third, this ranking helps interpret later scatter plots, because countries with extreme GDP per capita values can
+      influence relationships and trend lines, so it is important to recognize where the high-end leverage may come from.
+    </p>
+
+    <div class="py-3 my-4"></div>
+
+    <!-- VIZ 3 -->
+    <h1>Graph 3 GDP per Capita Distribution Across Countries (2022)</h1>
+    <div class="my-4"></div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/GDP3.png" class="img-fluid" alt="GDP per Capita Distribution Across Countries (2022)">
+      </div>
+    </div>
+
+    <p class="viz-text mt-3">
+      This histogram shows the full cross-country distribution rather than only the top performers. First, most
+      countries cluster at relatively low GDP per capita values, which indicates that low and middle income outcomes are
+      the global norm rather than the exception. Second, the distribution has a long right tail extending toward very
+      high incomes, meaning that a small number of countries are far above the rest, which makes global inequality
+      highly asymmetric. Third, the shape implies that comparing simple averages can be misleading, because the upper
+      tail can pull summary statistics upward, so later analyses should pay attention to dispersion, outliers, and the
+      possibility that relationships differ between the dense lower-income mass and the high-income tail.
+    </p>
+
+    <div class="py-3 my-4"></div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-white text-dark pt-5 pb-3 px-5">
+    <div class="row">
+      <div class="col-md-4">
+        <h5>Innovation & Inequality</h5>
+        <p><em>Exploring why some countries are richer than others.</em></p>
+        <p>
+          University Project<br>
+          Department of Computer Science &amp; CS<br>
+          Notre Dame, IN
+        </p>
+        <p>
+          TEL (574) 341-9262<br>
+          EMAIL jcarval2@nd.edu, ychen68@nd.edu
+        </p>
+      </div>
+
+      <div class="col-md-4">
+        <h5>Project Sections</h5>
+        <ul class="list-unstyled">
+          <li>Main</li>
+          <li>GDP</li>
+          <li>GII</li>
+          <li>R&amp;D Expenditure</li>
+          <li>Datasets</li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h5>External Resources</h5>
+        <ul class="list-unstyled">
+          <li>Global Innovation Index (GII)</li>
+          <li>World Bank GDP per Capita</li>
+          <li>OECD R&amp;D Data</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr>
+
+    <p class="text-center mb-0">Copyright © 2025 Innovation & Inequality</p>
+  </footer>
+
+</body>
 </html>

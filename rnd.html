@@ -1,32 +1,163 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-    <title>R&amp;D — Innovation & Inequality</title>
-  </head>
-  <body class="container">
-    <nav class="navbar navbar-expand-lg bg-light navbar-light mb-4">
-      <a class="navbar-brand" href="/index.html">Innovation &amp; Inequality</a>
-      <div class="ml-auto"><a class="btn btn-sm btn-outline-primary" href="/Visualizations/">Visualizations</a></div>
-    </nav>
+<html lang="en" dir="ltr">
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>R&amp;D Expenditure | Innovation & Inequality</title>
+
+  <style>
+    .viz-text {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      max-width: 980px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-light navbar-light">
+    <img src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=60"
+      class="mr-2" alt="Logo">
+    <a class="navbar-brand" href="index.html">Innovation &amp; Inequality</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-body"
+      aria-controls="navbar-body" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar-body">
+      <ul class="navbar-nav mr-auto"></ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Main</a></li>
+        <li class="nav-item"><a class="nav-link" href="gdp.html">GDP</a></li>
+        <li class="nav-item"><a class="nav-link" href="gii.html">GII</a></li>
+        <li class="nav-item active"><a class="nav-link" href="rnd.html">R&amp;D Expenditure</a></li>
+        <li class="nav-item"><a class="nav-link" href="datasets.html">Datasets</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="container" id="bsr-wrapper">
+
+    <!-- PAGE HEADER -->
     <h1>R&amp;D Expenditure</h1>
-    <p>This page provides details about R&amp;D spending and the interactive R&amp;D map.</p>
+    <div class="my-4"></div>
 
-    <section class="mb-4">
-      <h2>Interactive R&amp;D map</h2>
-      <iframe src="Visualizations/viz7_rnd_map.html" style="width:100%;height:650px;border:0;" loading="lazy" title="R&D Map"></iframe>
-    </section>
+    <p class="lead">
+      R&amp;D expenditure as a share of GDP measures how much of a country’s economic output is devoted to research and
+      development. In this project, it is treated as a policy-relevant input because governments and private sectors can
+      influence it through budgets, incentives, and industrial strategy. Comparing R&amp;D intensity across countries helps
+      explain differences in innovative capacity, highlights which countries invest consistently in knowledge creation,
+      and provides a concrete lever to test whether innovation can be influenced rather than treated as purely structural.
+    </p>
 
-    <section class="mb-4">
-      <h2>Sources & measurement</h2>
-      <p>Describe R&amp;D measurement, whether it's % of GDP or absolute spending, and which years/countries were included.</p>
-    </section>
+    <div class="py-3 my-4"></div>
 
-    <footer class="mt-5 mb-4">
-      <a href="/index.html">Back to home</a>
-    </footer>
-  </body>
+    <!-- VISUALIZATION 1 -->
+    <h2>Visualization 1 R&amp;D Intensity Distribution Across Countries (2022)</h2>
+
+    <div class="my-3">
+      <img src="images/RND1.png" class="img-fluid" alt="Distribution of R&amp;D intensity across countries (2022)">
+    </div>
+
+    <p class="viz-text mt-3">
+      This histogram shows that R&amp;D intensity is heavily concentrated at low values, meaning most countries spend a
+      small share of GDP on research and development. The distribution has a long right tail, indicating a smaller group
+      of countries invests much more heavily, which creates large cross-country gaps in innovation inputs. The spread is
+      wide even within the middle of the distribution, suggesting that countries with similar income levels can still
+      choose very different R&amp;D strategies, which makes R&amp;D a meaningful candidate lever for explaining divergence in
+      innovation outcomes.
+    </p>
+
+    <div class="py-3 my-4"></div>
+
+    <!-- VISUALIZATION 2 -->
+    <h2>Visualization 2 R&amp;D Investment Inequality (Boxplot, 2022)</h2>
+
+    <div class="my-3">
+      <img src="images/RND2.png" class="img-fluid" alt="Inequality in R&amp;D investment across countries (2022)">
+    </div>
+
+    <p class="viz-text mt-3">
+      The boxplot summarizes the same cross-country R&amp;D intensity data by highlighting central tendency, dispersion,
+      and extreme values. The median sits relatively low compared with the upper range, showing that a typical country’s
+      R&amp;D share is modest while the upper tail is driven by a handful of very high-investment cases. The presence of
+      clear outliers indicates that the global R&amp;D landscape is not just spread out, it has distinct leaders that
+      invest at levels far above most peers, which can translate into compounding advantages through sustained knowledge
+      accumulation and stronger innovation ecosystems.
+    </p>
+
+    <div class="py-3 my-4"></div>
+
+    <!-- VISUALIZATION 3 -->
+    <h2>Visualization 3 R&amp;D Intensity by Group (Low, Medium, High) (2022)</h2>
+
+    <div class="my-3">
+      <img src="images/RND3.png" class="img-fluid" alt="R&amp;D intensity by group (2022)">
+    </div>
+
+    <p class="viz-text mt-3">
+      This grouped violin plot shows how the distribution of R&amp;D intensity differs across low, medium, and high
+      investment categories, and it reveals both separation and variation within each group. The low group is tightly
+      concentrated near very small values, indicating that many countries invest similarly little, with limited spread.
+      The medium group shifts upward and shows broader dispersion, suggesting a wider range of strategies among countries
+      that invest at moderate levels. The high group has the highest center and the widest spread, with visible points
+      extending well above the rest, indicating that high-investment countries differ substantially even among themselves,
+      which matters for later analysis of efficiency and how investment translates into innovation outcomes.
+    </p>
+
+    <div class="py-3 my-4"></div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-white text-dark pt-5 pb-3 px-5">
+    <div class="row">
+      <div class="col-md-4">
+        <h5>Innovation & Inequality</h5>
+        <p><em>Exploring why some countries are richer than others.</em></p>
+        <p>
+          University Project<br>
+          Department of Computer Science &amp; CS<br>
+          Notre Dame, IN
+        </p>
+        <p>
+          TEL (574) 341-9262<br>
+          EMAIL jcarval2@nd.edu, ychen68@nd.edu
+        </p>
+      </div>
+
+      <div class="col-md-4">
+        <h5>Project Sections</h5>
+        <ul class="list-unstyled">
+          <li>Main</li>
+          <li>GDP</li>
+          <li>GII</li>
+          <li>R&amp;D Expenditure</li>
+          <li>Datasets</li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h5>External Resources</h5>
+        <ul class="list-unstyled">
+          <li>Global Innovation Index (GII)</li>
+          <li>World Bank GDP per Capita</li>
+          <li>OECD R&amp;D Data</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr>
+
+    <p class="text-center mb-0">Copyright © 2025 Innovation & Inequality</p>
+  </footer>
+
+</body>
 </html>
