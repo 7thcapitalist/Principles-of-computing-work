@@ -2,211 +2,481 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Innovation & Inequality: Why Are Some Countries Richer?</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Innovation & Inequality: Why Are Some Countries Richer?</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-light navbar-light">
-        <img src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=60"
-            class="mr-2">
-        <a class="navbar-brand" href="#">Innovation & Inequality</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-body"
-            aria-controls="navbar-body" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar-body">
-            <ul class="navbar-nav mr-auto"></ul>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#">Overview</a></li>
-                <li class="nav-item"><a class="nav-link" href="background.html">Background</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Visualizations</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Regression Model</a></li>
-                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
-                        role="button" aria-haspopup="true" aria-expanded="false">Resources</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Project Summary</a>
-                        <a class="dropdown-item" href="#">Code &amp; Notebook</a>
-                        <a class="dropdown-item" href="#">Final Report</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Data Sources</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
 
-    <div class="container" id="bsr-wrapper">
-        <h1>Why Are Some Countries Richer Than Others?</h1>
-        <div class="my-5"></div>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-light navbar-light">
+    <img src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=60"
+      class="mr-2" alt="Logo">
+    <a class="navbar-brand" href="index.html">Innovation &amp; Inequality</a>
 
-        <!-- FIRST IMAGE -->
-        <div class="row">
-            <div class="col">
-                <img src="images/number_of_countries_income.png"
-                     class="img-fluid mr-auto d-block border-0 rounded-0">
-            </div>
-            <div class="col-md-9">
-                <p>This project starts from a simple but fundamental question in economics: why do some countries enjoy
-                    much higher incomes than others? To explore this, I build a cross-country dataset that tracks
-                    differences in innovation capacity and income from 2011 to 2024. The idea is to move from raw data
-                    to meaningful insights about global inequality. By combining information on innovation performance
-                    and GDP per capita, the project investigates whether richer countries are systematically those that
-                    innovate more, and whether innovation might be one of the mechanisms behind persistent income gaps
-                    across nations.</p>
-            </div>
-        </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-body"
+      aria-controls="navbar-body" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div class="py-3 my-4"></div>
-        <h1>From Innovation Structures to Innovation Output</h1>
-        <div class="my-5"></div>
+    <div class="collapse navbar-collapse" id="navbar-body">
+      <ul class="navbar-nav mr-auto"></ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Main</a></li>
+        <li class="nav-item"><a class="nav-link" href="gdp.html">GDP</a></li>
+        <li class="nav-item"><a class="nav-link" href="gii.html">GII</a></li>
+        <li class="nav-item"><a class="nav-link" href="rnd.html">R&amp;D Expenditure</a></li>
+        <li class="nav-item"><a class="nav-link" href="datasets.html">Datasets</a></li>
+      </ul>
+    </div>
+  </nav>
 
-        <!-- SECOND IMAGE -->
-        <div class="row">
-            <div class="col-md-9">
-                <p>The first step in the analysis focuses on how governments try to create the conditions for
-                    innovation. Using policy-based data on R&amp;D support, the project looks at how much countries
-                    invest in innovation structures such as research incentives and public support for R&amp;D.
-                    However, spending alone does not guarantee results. To measure how effectively countries convert
-                    these structures into real innovation, I rely on the Global Innovation Index (GII), which scores
-                    national innovation ecosystems on a 0–100 scale. By comparing R&amp;D support to GII scores, the
-                    project examines which countries have efficient innovation systems and which ones struggle to turn
-                    policies and resources into actual innovative output.</p>
-            </div>
-            <div class="col">
-                <img src="images/top10countries_RnD.png"
-                     class="img-fluid mr-auto d-block border-0 rounded-0">
-            </div>
-        </div>
+  <div class="container" id="bsr-wrapper">
 
-        <div class="py-3 my-4"></div>
-        <h1>Does Innovation Help Explain Global Inequality?</h1>
-        <div class="my-5"></div>
+    <!-- PAGE HEADING + BLURB -->
+    <h1>Why Are Some Countries Richer Than Others?</h1>
+    <div class="my-4"></div>
+    <p class="lead">
+      Economic inequality between countries is one of the most persistent features of the global economy. Some nations
+      consistently generate high incomes and sustained growth, while others remain stuck at low levels of development.
+      This project tests whether innovation helps explain these differences, and whether innovation can be influenced
+      through policy choices. Using cross-country data on GDP per capita, the Global Innovation Index (GII), and R&amp;D
+      expenditure, we build a clear chain from outcomes to inputs.
+    </p>
 
-        <div class="row">
-            <div class="col">
-                <img src="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=600"
-                    class="img-fluid mr-auto d-block border-0 rounded-0">
-            </div>
-            <div class="col-md-9">
-                <p>In the final stage, the project links innovation performance to economic well-being using World Bank
-                    data on GDP per capita. After merging the Global Innovation Index with GDP per capita by
-                    country–year, I estimate a linear regression model where the dependent variable is the logarithm of
-                    GDP per capita and the key explanatory variable is the GII score. This allows me to quantify how
-                    strongly higher innovation capacity is associated with higher income levels. The goal is not to
-                    prove causality, but to test whether countries that innovate more also tend to be richer, and
-                    whether innovation is a plausible contributor to the income gaps we see across the world.</p>
-            </div>
-        </div>
+    <div class="py-3 my-4"></div>
 
-        <div class="py-3 my-4"></div>
+    <!-- =========================
+         GRAPH 1 (INTERACTIVE HTML)
+         ========================= -->
+    <h1>Graph 1 — Global GDP per Capita Map</h1>
+    <div class="my-4"></div>
+
+    <div class="row">
+      <div class="col">
+        <iframe
+          src="Visualizations/viz1_gdp_map.html"
+          title="GDP per Capita Over Time"
+          style="width: 100%; height: 650px; border: 0;"
+          loading="lazy">
+        </iframe>
+      </div>
     </div>
 
-    <footer class="bg-light text-light pt-5 pb-2 px-5">
-        <div class="row">
-            <div class="col-md-3">
-                <h2 class="mb-1">Innovation & Inequality</h2>
-                <p class="mb-3"><small><em>Exploring why some countries are richer than others.</em></small></p>
-                <p> University Project <br> Department of Economics &amp; CS <br> Notre Dame, IN </p>
-                <p> TEL (000) 000-0000 <br> EMAIL student@example.com </p>
-                <ul class="list-inline mt-5">
-                    <li class="list-inline-item">
-                        <a href="#" target="_blank" class="text-decoration-none">
-                            <i class="fa fa-fw fa-github-alt" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item py-1">
-                        <a href="#" target="_blank" class="text-decoration-none">
-                            <i class="fa fa-fw fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item py-1">
-                        <a href="#" target="_blank" class="text-decoration-none">
-                            <i class="fa fa-fw fa-facebook-official" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+    <div class="my-3"></div>
 
-            <div class="col-md-4">
-                <h5>Project Sections</h5>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item py-1 bg-transparent border-0">
-                        <a href="" target="_blank">Overview &amp; Motivation</a>
-                    </li>
-                    <li class="list-group-item py-1 bg-transparent border-0">
-                        <a href="" target="_blank">Data Sources &amp; Cleaning</a>
-                    </li>
-                    <li class="list-group-item py-1 bg-transparent border-0">
-                        <a href="Visualizations/viz1_gdp_map.html" target="_blank">GDP per Capita Map (Viz 1)</a>
-                    </li>
-                    <li class="list-group-item py-1 bg-transparent border-0">
-                        <a href="Visualizations/viz7_rnd_map.html" target="_blank">R&amp;D Map (Viz 7)</a>
-                    </li>
-                    <li class="list-group-item py-1 bg-transparent border-0">
-                        <a href="Visualizations/viz9_efficiency.html" target="_blank">Innovation Efficiency (Viz 9)</a>
-                    </li>
-                    <li class="list-group-item py-1 bg-transparent border-0">
-                        <a href="" target="_blank">Regression Results</a>
-                    </li>
-                    <li class="list-group-item py-1 bg-transparent border-0">
-                        <a href="" target="_blank">Discussion &amp; Limitations</a>
-                    </li>
-                </ul>
-            </div>
+    <div class="row">
+      <div class="col">
+        <p>
+          This map visualizes GDP per capita across countries, revealing stark and persistent differences in income
+          levels worldwide. The geographic clustering of wealth and poverty shows that inequality is systematic rather
+          than random. High-income regions tend to be concentrated, while low-income regions span large parts of the
+          world, suggesting that the forces behind prosperity operate across decades, not just short-term business
+          cycles. This visualization exists to create the puzzle and justify the central question of the project.
+        </p>
+      </div>
+    </div>
 
-            <div class="col-md-4">
-                <h5>External Resources</h5>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item py-1 bg-transparent border-0">
-                        <a href="" target="_blank">Global Innovation Index (GII)</a>
-                    </li>
-                    <li class="list-group-item py-1 bg-transparent border-0">
-                        <a href="" target="_blank">World Bank GDP per Capita</a>
-                    </li>
-                    <li class="list-group-item py-1 bg-transparent border-0">
-                        <a href="" target="_blank">OECD R&amp;D Data</a>
-                    </li>
-                    <li class="list-group-item py-1 bg-transparent border-0">
-                        <a href="" target="_blank">Project Presentation</a>
-                    </li>
-                    <li class="list-group-item py-1 bg-transparent border-0">
-                        <a href="" target="_blank">Full Report (PDF)</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    <div class="py-3 my-4"></div>
 
-        <hr>
+    <!-- =========================
+         GRAPH 2 (IMAGE)
+         ========================= -->
+    <h1>Graph 2 — GDP per Capita Distribution</h1>
+    <div class="my-4"></div>
 
-        <div class="row mt-4">
-            <div class="col-sm-6">
-                <p>Copyright © 2025 Innovation & Inequality</p>
-            </div>
-            <div class="col-sm-6">
-                <ul class="list-inline text-sm-center text-md-right">
-                    <li class="list-inline-item"><a href="" target="_blank">About</a></li>
-                    <li class="list-inline-item"><a href="" target="_blank">Methods</a></li>
-                    <li class="list-inline-item"><a href="" target="_blank">Results</a></li>
-                    <li class="list-inline-item"><a href="" target="_blank">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    <div class="row">
+      <div class="col">
+        <img src="images/Visualization 2.png" class="img-fluid mr-auto d-block border-0 rounded-0"
+          alt="Visualization 2">
+      </div>
+    </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
+    <div class="my-3"></div>
+
+    <div class="row">
+      <div class="col">
+        <p>
+          The distribution makes the inequality in the map measurable. Most countries cluster at low income levels,
+          while a much smaller group occupies the top end of the distribution, creating a long right tail. This
+          structure implies that global inequality is not a small difference around a common average: it is an
+          imbalanced world where prosperity concentrates in a minority of cases. Quantifying the magnitude of these gaps
+          strengthens the motivation to look for systematic explanations instead of isolated anecdotes.
+        </p>
+      </div>
+    </div>
+
+    <div class="py-3 my-4"></div>
+
+    <!-- =========================
+         GRAPH 3 (IMAGE)
+         ========================= -->
+    <h1>Graph 3 — Innovation Index (GII) Distribution</h1>
+    <div class="my-4"></div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/Visualization 3.png" class="img-fluid mr-auto d-block border-0 rounded-0"
+          alt="Visualization 3">
+      </div>
+    </div>
+
+    <div class="my-3"></div>
+
+    <div class="row">
+      <div class="col">
+        <p>
+          Innovation outcomes are also unevenly distributed across countries, mirroring the pattern observed in income.
+          A small set of countries achieves very high innovation scores, while many remain concentrated at lower levels.
+          Introducing innovation first as an outcome (rather than a policy choice) is important because it prevents us
+          from assuming the mechanism in advance. At this stage, the goal is simply to establish that innovation varies
+          dramatically and could plausibly be part of the same global structure that generates income inequality.
+        </p>
+      </div>
+    </div>
+
+    <div class="py-3 my-4"></div>
+
+    <!-- =========================
+         GRAPH 4 (IMAGE)
+         ========================= -->
+    <h1>Graph 4 — Innovation Index vs GDP per Capita</h1>
+    <div class="my-4"></div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/Visualization 4.png" class="img-fluid mr-auto d-block border-0 rounded-0"
+          alt="Visualization 4">
+      </div>
+    </div>
+
+    <div class="my-3"></div>
+
+    <div class="row">
+      <div class="col">
+        <p>
+          This scatter plot tests whether innovation is economically relevant. The relationship is strongly positive:
+          countries with higher innovation scores tend to have higher GDP per capita, and rich countries cluster in the
+          high-innovation region. While this does not prove causality, it validates innovation as a meaningful correlate
+          of prosperity. If innovation were unrelated to income, it would be difficult to justify exploring it further;
+          instead, the evidence supports continuing the chain toward policy relevance.
+        </p>
+      </div>
+    </div>
+
+    <div class="py-3 my-4"></div>
+
+    <!-- =========================
+         GRAPH 5 (IMAGE)
+         ========================= -->
+    <h1>Graph 5 — Innovation Index vs GDP Growth</h1>
+    <div class="my-4"></div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/Visualization 5.png" class="img-fluid mr-auto d-block border-0 rounded-0"
+          alt="Visualization 5">
+      </div>
+    </div>
+
+    <div class="my-3"></div>
+
+    <div class="row">
+      <div class="col">
+        <p>
+          Moving beyond income levels, this visualization asks whether innovation relates to economic performance over
+          time. If more innovative countries tend to grow faster or more steadily, innovation becomes relevant not only
+          for explaining who is rich, but also for understanding how countries sustain development. This strengthens the
+          story by tying innovation to dynamics rather than static snapshots. Even when growth varies year to year, the
+          broader pattern helps motivate innovation as a candidate mechanism behind long-run prosperity.
+        </p>
+      </div>
+    </div>
+
+    <div class="py-3 my-4"></div>
+
+    <!-- =========================
+         GRAPH 6 (IMAGE)
+         ========================= -->
+    <h1>Graph 6 — R&amp;D Expenditure (% of GDP) Distribution</h1>
+    <div class="my-4"></div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/Visualization 6.png" class="img-fluid mr-auto d-block border-0 rounded-0"
+          alt="Visualization 6">
+      </div>
+    </div>
+
+    <div class="my-3"></div>
+
+    <div class="row">
+      <div class="col">
+        <p>
+          This distribution introduces R&amp;D as a concrete input that governments and economies can influence. Countries
+          invest very differently: some allocate substantial shares of GDP to R&amp;D, while many invest almost nothing.
+          This variation matters because it reframes innovation from something purely structural to something that may be
+          shaped through deliberate choices. At this point in the story, the project pivots toward controllability:
+          if R&amp;D is meaningfully connected to innovation outcomes, then innovation becomes policy-relevant.
+        </p>
+      </div>
+    </div>
+
+    <div class="py-3 my-4"></div>
+
+    <!-- =========================
+         GRAPH 7 (INTERACTIVE HTML)
+         ========================= -->
+    <h1>Graph 7 — R&amp;D Expenditure Map</h1>
+    <div class="my-4"></div>
+
+    <div class="row">
+      <div class="col">
+        <iframe
+          src="Visualizations/viz7_rnd_map.html"
+          title="R&D Expenditure Map (2022)"
+          style="width: 100%; height: 600px; border: 0;"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+    <div class="my-3"></div>
+
+    <div class="row">
+      <div class="col">
+        <p>
+          The R&amp;D map visually reconnects the project to the original GDP map. High R&amp;D investment tends to cluster
+          in regions that are already wealthy, while low investment is concentrated in poorer regions. This overlap
+          strengthens the intuition that innovation inputs and economic outcomes are intertwined. Importantly, the map
+          also sets up the next step: even if rich countries invest more, the real question is whether higher investment
+          systematically translates into higher innovation outcomes across countries.
+        </p>
+      </div>
+    </div>
+
+    <div class="py-3 my-4"></div>
+
+    <!-- =========================
+         GRAPH 8 (IMAGE)
+         ========================= -->
+    <h1>Graph 8 — R&amp;D Expenditure vs Innovation Index</h1>
+    <div class="my-4"></div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/Visualization 8.png" class="img-fluid mr-auto d-block border-0 rounded-0"
+          alt="Visualization 8">
+      </div>
+    </div>
+
+    <div class="my-3"></div>
+
+    <div class="row">
+      <div class="col">
+        <p>
+          This visualization tests the controllability bridge: whether higher R&amp;D investment is associated with higher
+          innovation outcomes. The relationship is strongly positive, suggesting that innovation is at least partially
+          responsive to investment. At the same time, the scatter typically shows dispersion: countries with similar
+          investment can achieve different innovation scores. That gap is analytically valuable because it implies that
+          R&amp;D is important, but not sufficient; efficiency and institutions likely shape how well investment converts
+          into innovation.
+        </p>
+      </div>
+    </div>
+
+    <div class="py-3 my-4"></div>
+
+    <!-- =========================
+         GRAPH 9 (INTERACTIVE HTML)
+         ========================= -->
+    <h1>Graph 9 — Innovation Efficiency (Innovation ÷ R&amp;D)</h1>
+    <div class="my-4"></div>
+
+    <div class="row">
+      <div class="col">
+        <iframe
+          src="Visualizations/viz9_efficiency.html"
+          title="Innovation Efficiency (2022)"
+          style="width: 100%; height: 950px; border: 0;"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+    <div class="my-3"></div>
+
+    <div class="row">
+      <div class="col">
+        <p>
+          The efficiency view adds nuance and prevents the project from turning into “more spending solves everything.”
+          Some countries generate high innovation relative to their R&amp;D investment, while others invest heavily but
+          translate that spending into weaker outcomes. This variation is exactly what you would expect if broader
+          institutional quality, governance, education systems, and private-sector dynamism influence how R&amp;D turns
+          into results. In the storyline, this graph is the credibility checkpoint: it keeps the analysis realistic and
+          opens space for discussion about why investment works better in some environments than others.
+        </p>
+      </div>
+    </div>
+
+    <div class="py-3 my-4"></div>
+
+    <!-- =========================
+         GRAPH 10 (IMAGE)
+         ========================= -->
+    <h1>Graph 10 — R&amp;D Expenditure vs GDP per Capita</h1>
+    <div class="my-4"></div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/Visualization 10.png" class="img-fluid mr-auto d-block border-0 rounded-0"
+          alt="Visualization 10">
+      </div>
+    </div>
+
+    <div class="my-3"></div>
+
+    <div class="row">
+      <div class="col">
+        <p>
+          This chart closes the logical loop by linking the policy lever (R&amp;D) directly to the outcome (income).
+          If R&amp;D correlates with innovation and innovation correlates with GDP per capita, then a direct association
+          between R&amp;D and GDP provides triangulation and internal consistency. The goal is not to claim a single
+          causal pipeline, but to show that the full chain is coherent in the data. This makes the argument stronger:
+          innovation inputs, innovation outcomes, and economic prosperity align in a way that is difficult to dismiss as
+          purely accidental.
+        </p>
+      </div>
+    </div>
+
+    <div class="py-3 my-4"></div>
+
+    <!-- =========================
+         GRAPH 11 (IMAGE)
+         ========================= -->
+    <h1>Graph 11 — Bubble Chart: R&amp;D vs Innovation (Bubble = GDP)</h1>
+    <div class="my-4"></div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/Visualization 11.png" class="img-fluid mr-auto d-block border-0 rounded-0"
+          alt="Visualization 11">
+      </div>
+    </div>
+
+    <div class="my-3"></div>
+
+    <div class="row">
+      <div class="col">
+        <p>
+          This visualization synthesizes the project into a single frame. Countries in the top-right region—high R&amp;D
+          and high innovation—tend to be the richest, while low R&amp;D and low innovation countries cluster among the
+          poorest. The middle regions highlight transitional cases and reinforce the earlier efficiency story: some
+          countries appear to “overperform” or “underperform” given their investment. As a storytelling device, this
+          graph summarizes the mechanism intuitively right before the project moves to broader implications and
+          limitations.
+        </p>
+      </div>
+    </div>
+
+    <div class="py-3 my-4"></div>
+
+    <!-- =========================
+         GRAPH 12 (IMAGE)
+         ========================= -->
+    <h1>Graph 12 — Regional Comparison (Boxplots)</h1>
+    <div class="my-4"></div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/Visualization 12.png" class="img-fluid mr-auto d-block border-0 rounded-0"
+          alt="Visualization 12">
+      </div>
+    </div>
+
+    <div class="my-3"></div>
+
+    <div class="row">
+      <div class="col">
+        <p>
+          Regional comparisons place the findings back into a global equity context. Structural gaps across regions show
+          that innovation ecosystems—and the investments that support them—are not evenly distributed worldwide. This is
+          important for interpretation: even if countries can influence innovation, not all begin from the same baseline
+          capacity. In the project’s final logic, these persistent regional gaps help explain why global inequality can
+          reproduce itself over time, strengthening the social-good angle while also motivating careful discussion of
+          constraints, context, and policy realism.
+        </p>
+      </div>
+    </div>
+
+    <div class="py-3 my-4"></div>
+
+  </div>
+
+  <!-- FOOTER (unchanged) -->
+  <footer class="bg-light text-light pt-5 pb-2 px-5">
+    <div class="row">
+      <div class="col-md-3">
+        <h2 class="mb-1">Innovation & Inequality</h2>
+        <p class="mb-3"><small><em>Exploring why some countries are richer than others.</em></small></p>
+        <p> University Project <br> Department of Economics &amp; CS <br> Notre Dame, IN </p>
+        <p> TEL (000) 000-0000 <br> EMAIL student@example.com </p>
+      </div>
+
+      <div class="col-md-4">
+        <h5>Project Sections</h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item py-1 bg-transparent border-0"><a href="index.html">Main</a></li>
+          <li class="list-group-item py-1 bg-transparent border-0"><a href="gdp.html">GDP</a></li>
+          <li class="list-group-item py-1 bg-transparent border-0"><a href="gii.html">GII</a></li>
+          <li class="list-group-item py-1 bg-transparent border-0"><a href="rnd.html">R&amp;D Expenditure</a></li>
+          <li class="list-group-item py-1 bg-transparent border-0"><a href="datasets.html">Datasets</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h5>External Resources</h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item py-1 bg-transparent border-0"><a href="" target="_blank">Global Innovation Index (GII)</a></li>
+          <li class="list-group-item py-1 bg-transparent border-0"><a href="" target="_blank">World Bank GDP per Capita</a></li>
+          <li class="list-group-item py-1 bg-transparent border-0"><a href="" target="_blank">OECD R&amp;D Data</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row mt-4">
+      <div class="col-sm-6">
+        <p>Copyright © 2025 Innovation & Inequality</p>
+      </div>
+      <div class="col-sm-6">
+        <ul class="list-inline text-sm-center text-md-right">
+          <li class="list-inline-item"><a href="" target="_blank">About</a></li>
+          <li class="list-inline-item"><a href="" target="_blank">Methods</a></li>
+          <li class="list-inline-item"><a href="" target="_blank">Results</a></li>
+          <li class="list-inline-item"><a href="" target="_blank">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <!-- Your existing JS (optional; keep if you use it) -->
+  <script src="js/main.js"></script>
 
 </body>
 </html>
